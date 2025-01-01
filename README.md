@@ -29,7 +29,22 @@ Follow these steps to set up and explore the project locally:
    cd 3d-spider-rotation
    ```
 
-3. **Open the `index.html` file**:
+3. **Install Vite** (optional for running a local development server):
+   - Install Vite globally using npm:
+     ```bash
+     npm install -g vite
+     ```
+   - Alternatively, add Vite as a dev dependency:
+     ```bash
+     npm install vite --save-dev
+     ```
+   - Start the development server:
+     ```bash
+     vite
+     ```
+   - Open the provided URL in your browser to view the project.
+
+4. **Open the `index.html` file**:
    Open the file in your browser to view and interact with the 3D spider model.
 
 ## Use Cases
@@ -49,3 +64,4 @@ This project is open-source and available under the [MIT License](LICENSE).
 ---
 
 Enjoy exploring and interacting with the 3D spider model! If you have any questions or suggestions, feel free to open an issue or contact me. 🚀
+
