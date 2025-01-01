@@ -21,7 +21,7 @@ Follow these steps to set up and explore the project locally:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/3d-spider-rotation.git
+   git clone https://github.com/Priyanshu-WebDev-io/spider-3d-model-.git
    ```
 
 2. **Navigate to the project directory**:
