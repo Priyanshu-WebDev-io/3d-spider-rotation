@@ -57,10 +57,6 @@ Follow these steps to set up and explore the project locally:
 
 Contributions are welcome! If you'd like to enhance the project, please feel free to fork the repository and submit a pull request.
 
-## License
-
-This project is open-source and available under the [MIT License](LICENSE).
-
 ---
 
 Enjoy exploring and interacting with the 3D spider model! If you have any questions or suggestions, feel free to open an issue or contact me. 🚀
