@@ -4,10 +4,24 @@ This project presents an **interactive 3D spider model** that rotates dynamicall
 
 ## Features
 
-- **Mouse Interaction:** Rotate the spider model by moving your mouse across the screen.
+- **Interactive Mouse Controls:** Rotate the spider model by moving your mouse across the screen.
 - **Realistic 3D Design:** High-quality spider model with detailed textures and seamless animations.
 - **Web-Based Implementation:** Built with HTML, CSS, and JavaScript for cross-browser compatibility.
 - **Lightweight and Fast:** Optimized for smooth performance on modern devices.
+
+## Preview
+
+### Images
+_Include snapshots of the 3D spider model in various orientations._
+
+![Preview Image 1](path/to/image1.jpg)
+
+![Preview Image 2](path/to/image2.jpg)
+
+### Video Demonstration
+_Embed or link to a video showcasing the interactive rotation feature._
+
+[Watch Video](path/to/video.mp4)
 
 ## Technologies Used
 
