@@ -12,16 +12,14 @@ This project presents an **interactive 3D spider model** that rotates dynamicall
 ## Preview
 
 ### Images
-_Include snapshots of the 3D spider model in various orientations._
 
-![Preview Image 1](path/to/image1.jpg)
+![Preview Image 1](/public/Screenshot%202025-01-22%20191937.png)
 
-![Preview Image 2](path/to/image2.jpg)
+<!-- ![Preview Image 2](path/to/image2.jpg) -->
 
 ### Video Demonstration
-_Embed or link to a video showcasing the interactive rotation feature._
 
-[Watch Video](path/to/video.mp4)
+[Watch Video](/public/22.01.2025_19.20.18_REC.mp4)
 
 ## Technologies Used
 
