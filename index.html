@@ -2,18 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/black-spider-emblem_98292-4665.avif" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spider-3d</title>
+    <title>Spider-3D</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="/black-spider-emblem_98292-4665.avif" />
   </head>
-  <body>
-    <div id="box" style="width: 100%; height: 100vh; position: relative;">
-      <!-- <video src="/banner.mp4" style="position: absolute;width: 100vw; height: 100vh; z-index: -10; top: 0; left: 0;" autoplay muted loop></video> -->
-      <div id="model" style="width: 100vw; height: 100vh;"></div>
-      <p style="position: absolute; top: 0; color: white; font-size: 4vw;"></p><br>
-      <!-- <h1 style="position: absolute; top: 0; color: white; font-size: 4vw;">caution :- please watch on laptop or pc </h1> -->
-  </div>
-  <!-- <div style="width: 100vw; height: 100vh;" id="box2"></div> -->
+  <body class="bg-black text-white">
+    <div id="box" class="relative w-full h-screen flex items-center justify-center">
+      <!-- Background Video (Optional) -->
+      <!-- <video class="absolute w-full h-full object-cover z-[-1]" src="/banner.mp4" autoplay muted loop></video> -->
+      
+      <!-- 3D Model Container -->
+      <div id="model" class="w-full h-full"></div>
+
+      <!-- Responsive Text Warning -->
+      <h1 id="warningText" class="absolute top-4 text-white text-2xl md:text-4xl hidden">
+        ⚠️ Best viewed on larger screens!
+      </h1>
+    </div>
+
     <script type="module" src="/src/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const warningText = document.getElementById("warningText");
+
+        // Show a warning if screen width is less than 768px
+        if (window.innerWidth < 768) {
+          warningText.classList.remove("hidden");
+          gsap.fromTo(warningText, { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 1.5, ease: "power3.out" });
+        }
+      });
+    </script>
   </body>
 </html>
