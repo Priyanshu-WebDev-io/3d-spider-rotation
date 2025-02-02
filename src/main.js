@@ -3,7 +3,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import gsap from "gsap";
 
-// Scene & Camera Setup
+// Scene Setup
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -25,7 +25,6 @@ document.getElementById("model").appendChild(renderer.domElement);
 const pointLight = new THREE.PointLight("white", 10, 100);
 pointLight.position.set(2, 2, 2);
 scene.add(pointLight);
-
 const ambientLight = new THREE.AmbientLight("white", 0.5);
 scene.add(ambientLight);
 
@@ -55,10 +54,10 @@ loader.load(
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.05;
-controls.enableZoom = window.innerWidth < 768; // Zoom enabled for mobile, disabled for desktop
-controls.enableRotate = true; // Allow rotation
+controls.enableZoom = false; // Disable zoom for a better experience
+controls.enableRotate = false; // Disable built-in rotation (we'll handle it manually)
 
-// Mouse & Touch Controls
+// Mouse & Touch Drag Controls
 let isDragging = false;
 let prevX = 0, prevY = 0;
 
@@ -97,26 +96,12 @@ document.getElementById("box").addEventListener("touchstart", handleDragStart);
 document.getElementById("box").addEventListener("touchmove", handleDragMove);
 document.getElementById("box").addEventListener("touchend", handleDragEnd);
 
-// Gyroscope Support (Mobile Only)
-window.addEventListener("deviceorientation", (event) => {
-  if (spiderModel && window.innerWidth < 768) {
-    let rotationY = event.gamma * 0.002; // Left-right tilt
-    let rotationX = event.beta * 0.002; // Front-back tilt
-
-    spiderModel.rotation.y += rotationY;
-    spiderModel.rotation.x += rotationX;
-  }
-});
-
 // Animation Loop
-const clock = new THREE.Clock();
-
 function animate() {
   requestAnimationFrame(animate);
   controls.update();
   renderer.render(scene, camera);
 }
-
 animate();
 
 // Handle Window Resize
